@@ -1,0 +1,62 @@
+generated: '2026-08-06'
+method: searched
+probe: false
+source: https://arraybc.com/online-safety-and-security/
+url: https://arraybc.com/online-safety-and-security/
+description: >-
+  Array Behavioral Care publishes no trust.<domain> portal and no formal trust
+  center — the automated probe correctly recorded trust=none. What it does
+  publish is a patient-facing "Online Safety & Security" page naming its
+  certifications, plus a dated press announcement of its HITRUST e1
+  certification. This is the searched, human-verified fill: the certifications
+  below are real and named on Array's own surface, but they are healthcare
+  accreditation and information-security credentials for a clinical practice,
+  not the SOC 2 / audit-report package a software vendor's trust center would
+  carry. No SOC 2, ISO 27001, PCI DSS or FedRAMP claim appears anywhere on the
+  site, and no report-request workflow is published.
+certifications:
+  - name: HITRUST e1
+    scope: Array's integrated clinical systems
+    date: '2024-12-19'
+    note: >-
+      Foundational tier of HITRUST's three progressive assessments — essential
+      cybersecurity hygiene and information risk management controls.
+    source: https://arraybc.com/news-media/array-achieves-hitrust-e1-certification
+  - name: The Joint Commission accreditation
+    scope: Behavioral health care services
+    note: >-
+      Published as a Joint Commission + HITRUST badge on arraybc.com; Array
+      describes it as the gold standard for healthcare quality and patient
+      safety.
+    source: https://arraybc.com/about/
+  - name: HIPAA compliance
+    scope: Array AtHome telebehavioral health platform and PHI handling
+    note: >-
+      Statutory rather than certified. Array publishes a Notice of Privacy
+      Practices and states its platform protects PHI, explicitly contrasting it
+      with non-compliant consumer video tools.
+    source: https://arraybc.com/notice-privacy-practices/
+not_found:
+  - SOC 2 Type I or Type II
+  - ISO 27001
+  - PCI DSS
+  - FedRAMP
+  - Published penetration-test summary or report-request workflow
+report_access:
+  soc_reports: Not published. No report-request form or NDA workflow on the public site.
+docs:
+  - https://arraybc.com/online-safety-and-security/
+  - https://arraybc.com/notice-privacy-practices/
+  - https://arraybc.com/privacy-policy/
+  - https://arraybc.com/news-media/array-achieves-hitrust-e1-certification
+evidence:
+  - url: https://arraybc.com/online-safety-and-security/
+    http_status: 200
+    fetched: '2026-08-06'
+  - url: https://arraybc.com/news-media/array-achieves-hitrust-e1-certification
+    http_status: 200
+    fetched: '2026-08-06'
+  - url: https://trust.arraybc.com/
+    http_status: 0
+    note: NXDOMAIN — no trust subdomain exists.
+    fetched: '2026-08-06'

@@ -1,17 +1,39 @@
 aid: array-behavioral-care
 name: Array Behavioral Care
-description: 'Array Behavioral Care is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Array Behavioral Care is a virtual psychiatry and therapy practice headquartered
+  in Mount Laurel, New Jersey, delivering telebehavioral health across the continuum
+  of care — from the emergency department to the outpatient clinic to the home. Founded
+  in 1999 (formerly InSight + Regroup, rebranded to Array Behavioral Care in January
+  2021), the company operates three product families — Array OnDemand Care (acute /
+  emergency department consults), Array Community Care (outpatient clinics and physician
+  groups) and Array AtHome (direct-to-patient virtual psychiatry and therapy) — unified
+  since April 2025 under Array CareConnect. Its clinical technology is an Epic-based
+  interoperable EHR with an Epic MyChart patient portal at mychart.arraybc.com. Array
+  is accredited by The Joint Commission and earned HITRUST e1 certification for its
+  integrated clinical systems in December 2024. It publishes no public developer program,
+  API, SDK or machine-readable specification; integration with partner health systems
+  runs through Epic interoperability and a referral portal rather than a self-service
+  API.'
+image: https://arraybc.com/wp-content/uploads/2024/06/logo.png
 url: https://raw.githubusercontent.com/api-evangelist/array-behavioral-care/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
 created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Healthcare
+- Behavioral Health
+- Mental Health
+- Telehealth
+- Telepsychiatry
+- Digital Health
+- Electronic Health Records
+- Patient Engagement
+- HIPAA
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +41,57 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/array-behavioral-care-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://arraybc.com/
+- type: About
+  url: https://arraybc.com/about/
+- type: Press
+  url: https://arraybc.com/press/
+- type: Blog
+  url: https://arraybc.com/resources/
+- type: Support
+  url: https://arraybc.com/questions-about-care/
+- type: ContactSales
+  url: https://arraybc.com/start-an-inquiry/
+- type: Login
+  url: https://mychart.arraybc.com/Array/Authentication/Login
+- type: TermsOfService
+  url: https://arraybc.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://arraybc.com/privacy-policy/
+- type: Compliance
+  url: https://arraybc.com/online-safety-and-security/
+- type: Conformance
+  url: conformance/array-behavioral-care-conformance.yml
+- type: TrustCenter
+  url: security/array-behavioral-care-trust-center.yml
+- type: LLMsTxt
+  url: llms/array-behavioral-care-llms.txt
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Array is a virtual psychiatry practice whose only software surfaces are an
+    Epic MyChart patient portal and a partner referral portal — there is no
+    developer site, no api./developer. subdomain resolves, and its Epic-based EHR
+    exposes no public FHIR endpoint (the R4 CapabilityStatement path 404s and
+    Array is absent from Epic's 479-entry public endpoint directory).
+  evidence:
+    - url: https://arraybc.com/developers
+      status: 404
+    - url: https://arraybc.com/openapi.json
+      status: 404
+    - url: https://mychart.arraybc.com/Array/api/FHIR/R4/metadata
+      status: 404
+    - url: https://open.epic.com/Endpoints/R4
+      status: 200
+    - url: https://arraybc.com/llms.txt
+      status: 200
+  checked: '2026-08-06'

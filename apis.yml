@@ -14,6 +14,17 @@ description: 'Array Behavioral Care is a virtual psychiatry and therapy practice
   API, SDK or machine-readable specification; integration with partner health systems
   runs through Epic interoperability and a referral portal rather than a self-service
   API.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://arraybc.com/wp-content/uploads/2024/06/logo.png
 url: https://raw.githubusercontent.com/api-evangelist/array-behavioral-care/refs/heads/main/apis.yml
 x-type: company
